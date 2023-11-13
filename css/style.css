@@ -1,0 +1,436 @@
+:root {
+  --primary: #ad0505;
+  --bg: rgb(255, 252, 252);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: black;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.7rem 7%;
+  background-color: rgba(173, 5, 5, 0.966);
+  border-bottom: 1px solid #070101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+
+.navbar .Logo-navbar {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: rgb(255, 51, 51);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #fff;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(255, 51, 51);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/*Hero Section*/
+.Hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/animasikampus.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.Hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(255, 246, 246) 6%,
+    rgba(245, 239, 239, 0) 25%
+  );
+}
+
+.Hero .content {
+  padding: 1.4rem 2%;
+  max-width: 60rem;
+}
+
+.Hero .content h1 {
+  color: #b40303;
+  font-size: 5em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.Hero .content p {
+  text-align: center;
+  color: #fff;
+  font-style: oblique;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.Hero .content .circle-image {
+  text-align: center;
+}
+
+
+.Hero .content .circle-image img {
+    width: 150px; /* Sesuaikan dengan lebar yang Anda inginkan */
+    height: 150px; /* Sesuaikan dengan tinggi yang Anda inginkan */
+    overflow: hidden;
+    border-radius: 70%;
+    position: center;
+    
+}
+
+.Hero .content .cta {
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  display: block;
+  background-color: #ad0505;
+}
+
+/*Profil Section*/
+.Profil {
+  padding: 7rem 7% 1.4rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.Profilsaya,
+.Fotosaya {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.biodata {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tabel2 {
+  width: 100%;
+}
+
+.tabel2 th {
+  text-align: left;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabel2 td {
+  padding: 8px 0;
+}
+
+.tabel2 input[type='text'],
+.tabel2 select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* CSS untuk mengatur textarea seperti elemen input lainnya */
+.tabel2 textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none; /* Untuk mencegah pengguna mengubah ukuran textarea */
+}
+
+/* CSS untuk mengatur padding pada kolom pertama dan kedua */
+.column1 {
+  width: 35%;
+  padding-right: 15px;
+}
+
+.column2 {
+  width: 65%;
+}
+.Button {
+  background-color: #ad0505;
+  width: 50px; /* Atur lebar tombol sesuai kebutuhan */
+  height: 30px; /* Atur tinggi tombol sesuai kebutuhan */
+  color: #fff; /* Warna teks */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Untuk menambahkan sudut lengkung pada tombol */
+  cursor: pointer;
+  margin-left: 68%;
+  margin-top: 10px;
+}
+
+/* Pengisikata Section */
+.pengisikata-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/kampus-unisbank.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  padding: 1.4rem 2%;
+}
+
+.pengisikata-title {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  color: #b40303;
+  font-size: 2em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  animation: slideInFromTop 1s ease both,
+    colorChange 3s linear infinite alternate;
+}
+
+.pengisikata-text {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  color: #fff;
+  font-style: oblique;
+  font-size: 1em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  animation: slideInFromTop 1s ease both,
+    colorChange 3s linear infinite alternate;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background: rgba(255, 0, 0, 0.521);
+  }
+  25% {
+    background: rgba(253, 253, 252, 0.2);
+  }
+  50% {
+    background: rgba(0, 0, 255, 0.2);
+  }
+  75% {
+    background: rgba(0, 255, 0, 0.2);
+  }
+  100% {
+    background: rgba(255, 0, 0, 0.2);
+  }
+}
+
+/* Pengisikata Section End */
+
+/* Atur margin top untuk mengatur jarak antara pengisi dan bagian "FileFoto" */
+.FileFoto {
+  padding: 0.5rem 7% 1.4rem;
+}
+
+.fotoposting {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  font-size: large;
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f8f9fa; /* Memberikan warna latar belakang yang sama dengan class biodata */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.file-table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.file-table td {
+  padding: 8px 10px;
+}
+
+.file-upload {
+  width: 100%;
+}
+
+/* Menambahkan keterangan ukuran file yang dapat diunggah */
+.file-table label::after {
+  content: ' (Maksimum 500KB)'; /* Ganti dengan ukuran file yang diinginkan */
+  font-size: 12px;
+  color: #777;
+  margin-left: 5px;
+}
+
+.save {
+  background-color: #ad0505;
+  width: 50px; /* Atur lebar tombol sesuai kebutuhan */
+  height: 30px; /* Atur tinggi tombol sesuai kebutuhan */
+  color: #fff; /* Warna teks */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Untuk menambahkan sudut lengkung pada tombol */
+  cursor: pointer;
+  margin-left: 68%;
+  margin-top: 10px;
+}
+
+/*Ukuran web*/
+/*Laptop*/
+@media (min-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #520101;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.8s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/*Hp*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #520101;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.8s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}

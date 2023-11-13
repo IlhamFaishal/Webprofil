@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Diri Kampus</title>
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--style-->
+  </head>
+  <body>
+    <!--Navbar start-->
+    <nav class="navbar">
+      <a href="#" class="Logo-navbar">Unisbank</a>
+
+      <div class="navbar-nav">
+        <a href="#Home">Home</a>
+        <a href="#Profil">Profil</a>
+        <a href="#FileFoto">File Foto</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!--Navbar end-->
+
+    <!--Hero Section Start-->
+    <section class="Hero" id="Home">
+      <main class="content">
+        <h1>Profil Mahasiswa</h1>
+        <p>Selamat Datang Mahasiswa Unisbank</p>
+        <div class="circle-image">
+          <img src="img/fotolamaran.jpeg" alt="Profil Mahasiswa" />
+        </div>
+        <a href="#" class="cta">Follow IG Sekarang</a>
+      </main>
+    </section>
+
+    <!--Hero Section End-->
+
+    <!--Profil Start-->
+    <section id="Profil" class="Profil"></section>
+    <h2 class="Profilsaya">Profil Saya</h2>
+    <div class="biodata">
+      <form>
+        <table class="tabel2">
+          <tr>
+            <th class="column1"><label for="nama">Nama</label></th>
+            <th class="column2"><input type="text" id="nama" name="nama" /></th>
+          </tr>
+          <tr>
+            <th class="column1">
+              <label for="tempat_lahir">Tempat Lahir</label>
+            </th>
+            <th class="column2">
+              <input type="text" id="tempat_lahir" name="tempat_lahir" />
+            </th>
+          </tr>
+          <tr>
+            <th class="column1">
+              <label for="tanggal_lahir">Tanggal Lahir</label>
+            </th>
+            <th class="column2">
+              <input type="date" id="tanggal_lahir" name="tanggal_lahir" />
+            </th>
+          </tr>
+          <tr>
+            <th class="column1">
+              <label for="warga_negara">Status Warga Negara</label>
+            </th>
+            <th class="column2">
+              <select id="warga_negara" name="warga_negara">
+                <option value="wni">WNI (Warga Negara Indonesia)</option>
+                <option value="wna">WNA (Warga Negara Asing)</option>
+              </select>
+            </th>
+          </tr>
+          <tr id="negara_wna" style="display: none">
+            <th class="column1"><label for="negara">Negara Asal</label></th>
+            <th class="column2">
+              <input type="text" id="negara" name="negara" />
+            </th>
+          </tr>
+          <tr>
+            <th class="column1">
+              <label for="No_KTP_Mahasiswa">No KTP Mahasiswa</label>
+            </th>
+            <th class="column2">
+              <input
+                type="text"
+                id="No_KTP_Mahasiswa"
+                name="No_KTP_Mahasiswa"
+              />
+            </th>
+          </tr>
+          <tr class="form-group">
+            <th class="column1"><label for="alamat">Alamat</label></th>
+            <th class="column2">
+              <textarea id="alamat" name="alamat" rows="4"></textarea>
+            </th>
+          </tr>
+          <tr class="form-group">
+            <th class="column1">
+              <label for="jenis_kelamin">Jenis Kelamin</label>
+            </th>
+            <th class="column2">
+              <select id="jenis_kelamin" name="jenis_kelamin">
+                <option value="pria">Pria</option>
+                <option value="wanita">Wanita</option>
+              </select>
+            </th>
+          </tr>
+          <tr class="form-group">
+            <th class="column1"><label for="agama">Agama</label></th>
+            <th class="column2">
+              <select id="agama" name="agama">
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </th>
+          </tr>
+          <tr class="form-group">
+            <th class="column1">
+              <label for="golongan_darah">Golongan Darah</label>
+            </th>
+            <th class="column2">
+              <select id="golongan_darah" name="golongan_darah">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option value="O">O</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </th>
+          </tr>
+          <tr class="form-group">
+            <th class="column1">
+              <label for="status_sipil">Status Sipil</label>
+            </th>
+            <th class="column2">
+              <select id="status_sipil" name="status_sipil">
+                <option value="single">Belum Menikah</option>
+                <option value="menikah">Menikah</option>
+                <option value="cerai">Cerai</option>
+              </select>
+            </th>
+          </tr>
+        </table>
+      </form>
+    </div>
+    
+    <!--Profil End-->
+
+    <!--Simpan data-->
+    <button class="Button" id="simpan-button">Save</button>
+    <!--Profil End-->
+
+    <!-- Pengisikata Section Start -->
+    <div class="pengisikata-section">
+      <h1 class="pengisikata-title">Kampus Unisbank</h1>
+      <p class="pengisikata-text">
+        Website ini berisikan data diri seorang mahasiswa Unisbank.tempat di
+        mana Anda dapat menjelajahi informasi lengkap mengenai para mahasiswa,
+        pengalaman mereka, dan berbagai kegiatan inspiratif di lingkungan
+        kampus. Saksikan perjalanan mereka dalam menggapai prestasi dan ikuti
+        kami di Instagram untuk mendapatkan pembaruan terkini!"
+      </p>
+    </div>
+    <!-- Pengisikata Section End -->
+
+    <!--File foto start-->
+
+    <section id="FileFoto" class="FileFoto"></section>
+    <h2 class="Fotosaya">File Foto</h2>
+    <p class="fotoposting">Kirim foto anda kesini!</p>
+
+    <table class="file-table">
+      <tr>
+        <td>
+          <label for="ijazah">Ijazah SMA</label>
+        </td>
+        <td>
+          <input type="file" name="ijazah" id="ijazah" class="file-upload" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="foto_almet">Pas Foto Almamater</label>
+        </td>
+        <td>
+          <input
+            type="file"
+            name="foto_almet"
+            id="foto_almet"
+            class="file-upload"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="kk">Foto Kartu Keluarga (KK)</label>
+        </td>
+        <td>
+          <input type="file" name="kk" id="kk" class="file-upload" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="ktp">Foto Kartu Tanda Penduduk (KTP)</label>
+        </td>
+        <td>
+          <input type="file" name="ktp" id="ktp" class="file-upload" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="sim">Foto Surat Izin Mengemudi (SIM)</label>
+        </td>
+        <td>
+          <input type="file" name="sim" id="sim" class="file-upload" />
+        </td>
+      </tr>
+    </table>
+    <button class="save" id="save-button">Save</button>
+    <script>
+      feather.replace();
+    </script>
+
+    <!--Javascript-->
+    <script src="js/script.js"></script>
+  </body>
+</html>
